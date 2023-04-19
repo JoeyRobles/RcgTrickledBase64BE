@@ -1,11 +1,10 @@
 ﻿namespace JoeyRcgTryOut.Services.Encoding
 {
+    using JoeyRcgTryOut.Infrastructure.Exceptions;
     using JoeyRcgTryOut.Infrastructure.Messages.Requests;
     using JoeyRcgTryOut.Infrastructure.Services;
     using JoeyRcgTryOut.Services.Encoding.Hubs;
     using Microsoft.AspNetCore.SignalR;
-    using System.Buffers.Text;
-    using System.Net;
 
     public class EncodingService : IEncodingService
     {
@@ -18,16 +17,23 @@
 
         public async Task EncodeStringWithRandomDelayAsync(EncodingViaHubRequest request)
         {
-            var sampleBase64 = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(request.Message));
-            var random = new Random();
-            for (int i = 0; i < sampleBase64.Length; i++)
+            try
             {
-                var sampleLetter = sampleBase64[i];
-                await Task.Delay(random.Next(1000, 5000));
-                await this.hubContext.Clients.Client(request.ConnectionId).SendAsync("ReceiveMessage", sampleLetter);
-            }
+                var sampleBase64 = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(request.Message));
+                var random = new Random();
+                for (int i = 0; i < sampleBase64.Length; i++)
+                {
+                    var sampleLetter = sampleBase64[i];
+                    await Task.Delay(random.Next(1000, 5000));
+                    await this.hubContext.Clients.Client(request.ConnectionId).SendAsync("ReceiveMessage", sampleLetter);
+                }
 
-            await this.hubContext.Clients.Client(request.ConnectionId).SendAsync("ReceiveMessage", "end");
+                await this.hubContext.Clients.Client(request.ConnectionId).SendAsync("ReceiveMessage", "end");
+            }
+            catch (Exception e) 
+            {
+                throw new EncodingException("Exception in Encoding Service", e);
+            }
         }
     }
 }

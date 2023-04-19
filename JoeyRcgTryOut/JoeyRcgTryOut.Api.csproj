@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\JoeyRcgTryOut.Infrastructure\JoeyRcgTryOut.Infrastructure.csproj" />
-    <ProjectReference Include="..\Services\JoeyRcgTryOut.Services.Encoding\JoeyRcgTryOut.Services.Encoding.csproj" />
+    <ProjectReference Include="..\Services\Encoding\JoeyRcgTryOut.Services.Encoding\JoeyRcgTryOut.Services.Encoding.csproj" />
   </ItemGroup>
 
 </Project>
