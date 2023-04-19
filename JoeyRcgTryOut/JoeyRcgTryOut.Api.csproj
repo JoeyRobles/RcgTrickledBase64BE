@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e5973603-c729-49e4-8dcd-cc9a15e0b515</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\JoeyRcgTryOut.Infrastructure\JoeyRcgTryOut.Infrastructure.csproj" />
+    <ProjectReference Include="..\Services\JoeyRcgTryOut.Services.Encoding\JoeyRcgTryOut.Services.Encoding.csproj" />
+  </ItemGroup>
+
+</Project>

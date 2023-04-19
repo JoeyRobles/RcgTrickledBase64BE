@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoeyRcgTryOut.Api", "JoeyRcgTryOut\JoeyRcgTryOut.Api.csproj", "{71C46875-9C3F-4E65-9538-1FE1240816DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apis", "Apis", "{13E05693-D85E-43AB-B624-A4B98D9B097C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D7B12F66-72B8-46A6-B830-2CD365F054D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8944261B-F19B-427F-8FB0-70CF14D57676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoeyRcgTryOut.Infrastructure", "Infrastructure\JoeyRcgTryOut.Infrastructure\JoeyRcgTryOut.Infrastructure.csproj", "{9F200FC5-6787-413A-8732-9F92928011C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoeyRcgTryOut.Services.Encoding", "Services\JoeyRcgTryOut.Services.Encoding\JoeyRcgTryOut.Services.Encoding.csproj", "{96231369-33E4-4BC8-970B-DF22D6BDCCCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71C46875-9C3F-4E65-9538-1FE1240816DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C46875-9C3F-4E65-9538-1FE1240816DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C46875-9C3F-4E65-9538-1FE1240816DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C46875-9C3F-4E65-9538-1FE1240816DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F200FC5-6787-413A-8732-9F92928011C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F200FC5-6787-413A-8732-9F92928011C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F200FC5-6787-413A-8732-9F92928011C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F200FC5-6787-413A-8732-9F92928011C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96231369-33E4-4BC8-970B-DF22D6BDCCCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96231369-33E4-4BC8-970B-DF22D6BDCCCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96231369-33E4-4BC8-970B-DF22D6BDCCCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96231369-33E4-4BC8-970B-DF22D6BDCCCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71C46875-9C3F-4E65-9538-1FE1240816DF} = {13E05693-D85E-43AB-B624-A4B98D9B097C}
+		{9F200FC5-6787-413A-8732-9F92928011C4} = {8944261B-F19B-427F-8FB0-70CF14D57676}
+		{96231369-33E4-4BC8-970B-DF22D6BDCCCB} = {D7B12F66-72B8-46A6-B830-2CD365F054D7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0F69B34-9254-476C-959F-168674B0DFF9}
+	EndGlobalSection
+EndGlobal
